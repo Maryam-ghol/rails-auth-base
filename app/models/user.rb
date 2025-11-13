@@ -3,12 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-    # Roles
+  # Roles
   def admin?
-    role == 'admin'
+    role == "admin"
   end
 
   def user?
-    role == 'user'
+    role == "user"
   end
 end
